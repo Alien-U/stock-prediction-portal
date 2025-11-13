@@ -6,11 +6,14 @@ import Register from './components/register.jsx'
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
 import Login from './components/login.jsx'
+// import AuthProvider from './authProvider'
+import AuthProvider from './AuthProvider'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <AuthProvider>
     <BrowserRouter>
     <Header/>
       <Routes>
@@ -20,6 +23,7 @@ function App() {
       </Routes>
       <Footer/>
     </BrowserRouter>
+    </AuthProvider>
     </>
   )
 }
